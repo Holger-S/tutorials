@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fs_sr_script>
+  <fs_sr_options write_to_backup_dir="1" display_replace_string="1" keep_file_time_stamp="1" prompt_flag="2">
+    <backup_path>I:\Holli\_develop\projects\tutorials\out</backup_path>
+  </fs_sr_options>
+  <fs_sr_info case_sensitive="0" regular_expression="1">
+    <search_string>"Menüeintrag*";"*";"*"\r\n</search_string>
+    <replace_string></replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" regular_expression="1">
+    <search_string>"*";"*";"*"</search_string>
+    <replace_string>\&lt;tr style="vertical-align:top;" \&gt;\&lt;td\&gt;\&lt;a href="%2"\&gt;%1\&lt;/a\&gt;\&lt;/td\&gt;\&lt;td\&gt;%3\&lt;/td\&gt;\&lt;/tr\&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" regular_expression="1">
+    <search_string>&lt;a href="*"&gt;*|</search_string>
+    <replace_string>\&lt;strong\&gt;%2\&lt;/strong\&gt;\&lt;br\&gt;\&lt;a href="%1"\&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" regular_expression="1">
+    <search_string>&lt;a href="*"&gt;* |</search_string>
+    <replace_string>%2: \&lt;a href="%1"\&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" regular_expression="1">
+    <search_string>*&lt;br&gt;*&lt;a</search_string>
+    <replace_string>%1 %2\&lt;br\&gt;\&lt;a</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" operation="1">
+    <search_string></search_string>
+    <replace_string>&lt;table&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" operation="2">
+    <search_string></search_string>
+    <replace_string>&lt;/table&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" operation="1">
+    <search_string></search_string>
+    <replace_string>&lt;html&gt;&lt;body&gt;</replace_string>
+  </fs_sr_info>
+  <fs_sr_info case_sensitive="0" operation="2">
+    <search_string></search_string>
+    <replace_string>&lt;/body&gt;&lt;/html&gt;</replace_string>
+  </fs_sr_info>
+  <fs_file_list_info sort_file_names="0" sort_ascending="1">
+    <mask>OnlineTutorials.csv</mask>
+    <path>I:\Holli\_develop\projects\tutorials\source</path>
+  </fs_file_list_info>
+</fs_sr_script>
